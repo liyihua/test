@@ -1,0 +1,15 @@
+Log file for attempted extraction of .csv's
+
+Beginning process on wheelchair 3
+Data for wheelchair 3 retrieved, moving on to raw_data comprehension
+Beginning comprehension algorithm, total data lines to interpret is: 100000
+Completed 10000 data lines so far
+Completed 20000 data lines so far
+Completed 30000 data lines so far
+Completed 40000 data lines so far
+Completed 50000 data lines so far
+Completed 60000 data lines so far
+Completed 70000 data lines so far
+Completed 80000 data lines so far
+Completed 90000 data lines so far
+exported temp & hum
