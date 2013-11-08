@@ -7,31 +7,41 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-		<script src="static/game.js"></script>
-		<link rel="stylesheet" href="static/game.css" />
+		<script src="static/plot.js"></script>
+		<script src="static/socket.js"></script>
+		<link rel="stylesheet" href="static/plot.css" />
+		<link rel="stylesheet" href="static/resources/bootstrap/css/bootstrap.css" />
+		 <script src="static/resources/bootstrap/js/bootstrap.min.js"></script>
 		<script language="javascript" type="text/javascript" src="static/resources/flot/jquery.js"></script>
 		<script type="text/javascript" src="static/resources/flot/jquery.flot.js"></script>
 		<script type="text/javascript" src="static/resources/flot/jquery.flot.time.js"></script>
-
+		<script type="text/javascript" src="static/resources/flot/jquery.flot.threshold.js"></script>
 	</head>
 
 	<body>
 
 		<div id="content">
-<button id="connect">
+			<button id="connect" class="btn">
 				get Data
 			</button>
 			<div class="demo-container">
 				<div id="data_container" class="demo-placeholder"></div>
-				<div id="hum_container" class="demo-placeholder"></div>
+         <div id ="second_graph">
+         	<h4 id="second_graph_title">Heat Index </h4>
+				<div id="heatIndex_container" class="demo-placeholder"></div>
+				<div id="caption">
+					<p>
+						Wheelchair 1 has been in range <span id="range"></span> for <span id="duration"></span> minutes.
+					</p>
+				</div>
 			</div>
+	</div>
+			<div id="third_graph">
+				<h4>Time spent outside</h4>
+				<div id="placeholder"  class="demo-placeholder">
 
-<div id="third_graph">
-	<h4>Time spent outside</h4>
-			<div id="placeholder"  class="demo-placeholder">
-            
+				</div>
 			</div>
-</div>
 		</div>
 	</body>
 </html>

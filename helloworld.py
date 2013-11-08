@@ -31,7 +31,7 @@ class MyWebSocket(websocket.WebSocketHandler):
         self.write_message("you said:"+ message)
         prev_time=float(message)
         j=0
-        while j<210:
+        while j<110:
             pro1 = gth.ProcessScript()
             pro1.RunProcess(1,prev_time)
             #print len(pro1.TimeVector[0])
