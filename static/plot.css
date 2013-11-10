@@ -57,6 +57,11 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#connect{
+
+	left:15px;
+	top:15px;
+}
 #third_graph {
 	position: absolute;
 	left: 50px;
@@ -88,10 +93,18 @@
 #second_graph{
 		position: absolute;
 	left: 720px;
-	top: 40px;
+	top: 0px;
 	width: 500px;
 	height: 350px;
 }
 #caption {
+	position:absolute;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		top:400px;
+}
+.flot-text{
+	font-size:13px!important;
+}
+table{
+	font-size:13px!important;
 }

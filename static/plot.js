@@ -7,6 +7,7 @@ $(document).ready(function() {
 			minTickSize : [1, "day"]
 
 		}
+		
 	};
 	var heatIndexOption = {
 		xaxis : {
@@ -17,6 +18,9 @@ $(document).ready(function() {
 		yaxis : {
 			autoscaleMargin : 0.2,
 			tickDecimals : 1
+		},
+		grid:{
+			markings: [ { yaxis: { from: 91, to: 91 } ,color:"rgb(255,225,0)"},{ yaxis: { from:80, to: 80 } ,color:"rgb(188,239,79)"}]
 		}
 	};
 	var options2 = {
@@ -75,12 +79,12 @@ $(document).ready(function() {
 			show : true
 		},
 		label : "Extreme Caution"
-	},{label:"Caution",color:"rgb(255,225,0)",data:empty}], heatIndexOption);
+	},{label:"Caution",color:"rgb(255,225,0)",data:empty},{label:"Normal",color:"rgb(188,239,79)",data:empty}], heatIndexOption);
 	//alert("here");
 	var yaxisLabel = $("<div class='axisLabel yaxisLeftLabel'></div>").text("Temperature (F)").appendTo($('#data_container'));
 	var yaxisLabel2 = $("<div class='axisLabel yaxisLabel'></div>").text("Humidity").appendTo($('#data_container'));
 	var yaxisLabel3 = $("<div class='axisLabel yaxisLeftLabel'></div>").text("(Hour)").appendTo($('#placeholder'));
-	var totalPoints = 25;
+	var totalPoints = 22;
 
 	function getHeatIndexSeriesObj() {
 		return [{
@@ -97,7 +101,7 @@ $(document).ready(function() {
 				show : true
 			},
 			label : "Extreme Caution"
-		}, {data:[],label:"Caution",color:"rgb(255,225,0)"}];
+		}, {data:[],label:"Caution",color:"rgb(255,225,0)"},{label:"Normal",color:"rgb(188,239,79)",data:empty}];
 	}
 
 	function getSeriesObj() {
@@ -296,7 +300,7 @@ $(document).ready(function() {
 		};
 
 		ws.onclose = function() {
-			alert("socket closed");
+			console.log("socket closed");
 			//message('<p class="event">Socket Status: ' + socket.readyState + ' (Closed)');
 		}
 	}
